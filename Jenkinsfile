@@ -12,8 +12,8 @@ pipeline {
 
     stage('git tag') {
     	steps {
-    		"""
-    			sh git tag v1.0.0-$BUILD_NUMBER && git push origin v1.0.0-$BUILD_NUMBER
+    		sh """
+    			git tag v1.0.0-$BUILD_NUMBER && git push origin v1.0.0-$BUILD_NUMBER
     		"""
     	}
     }
