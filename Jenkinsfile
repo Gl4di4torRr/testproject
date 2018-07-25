@@ -13,7 +13,7 @@ pipeline {
     stage('git tag') {
     	steps {
     		sh """
-    			git config --global -l
+    			git config -l
     			git tag v1.0.0-$BUILD_NUMBER && git push origin v1.0.0-$BUILD_NUMBER
     		"""
     	}
